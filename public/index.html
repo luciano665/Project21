@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partneruniversities der ESB Business School</title>
+
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+</head>
+<body>
+    <h1><strong>Partneruniversities of the ESB Business School</strong></h1>
+    <div id="searchContainer">
+        <p><strong>Search for University, Country or City: </strong></p>
+        <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Search">
+    </div>
+
+    <img id="logo" src="data:image/png;base64,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" alt="Your Logo">
+    <a id="logo-link" href="https://www.esb-business-school.de/" target="_blank">
+        <img id="logo" src="data:image/png;base64,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" alt="Your Logo">
+    </a>
+    
+    <div id="university-container">
+        <script>
+            var universities = [ 
+              { name: "<strong>Atlantic Technological University (ATU)</strong><br>Ireland, Galway", image: "https://www.esb-business-school.de/fileadmin/_processed_/5/0/csm_esb-business-school_ATU_Galway_City_1_c5f99fe964.webp" },
+              { name: "<strong>Austral University</strong><br>Argentina, Buenos Aires", image: "https://www.esb-business-school.de/fileadmin/_processed_/9/3/csm_esb-business-school_Austral_University-Foto_1_429e172c67.webp" },
+              { name: "<strong>Beijing Normal University</strong><br>China, Beijing", image: "https://klc.edu.sg/wp-content/uploads/2021/03/Beijing-Normal-University.jpg" },
+              { name: "<strong>Bucharest University of Economic Studies</strong><br>Romania, Bucharest", image: "https://www.esb-business-school.de/fileadmin/_processed_/9/a/csm_esb-business-school_Bucharest_Universtiy_1_cf8f7bc0f2.webp" },
+              { name: "<strong>California State University, Long Beach</strong><br>USA, Long Beach", image: "https://www.esb-business-school.de/fileadmin/_processed_/a/5/csm_esb-business-school_California_State_University__Long_Beach_1_c5847af5e1.webp" },
+              { name: "<strong>Chapman University</strong><br>USA, Orange", image: "https://www.esb-business-school.de/fileadmin/_processed_/1/e/csm_esb-business-school_Chapman-Foto_1_c0fa0cbaf4.webp" },
+              { name: "<strong>Chulalongkorn</strong><br>Thailand, Bangkok", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKoj_0BB3ldKKl4hggMzABPqsLfiRnzY4PfrgxB24GMg&s" },
+              { name: "<strong>Donghua University</strong><br>China, Shanghai", image: "https://www.esb-business-school.de/fileadmin/_processed_/1/e/csm_esb-business-school-DHU_photo_2_4104dfd3d1.webp" },
+              { name: "<strong>Ecole Supérieure des Sciences Commerciales d'Angers (ESSCA)</strong><br>France, Angers", image: "https://www.esb-business-school.de/fileadmin/_processed_/e/5/csm_esb-business-school_ESSCA_campus-Angers-2020-01-01_e8f3718028.webp" },
+              { name: "<strong>Ecole Supérieure des Sciences Commerciales d'Angers (ESSCA) Campus Budapest</strong><br>Hungary, Budapest", image: "https://siue.studioabroad.com/_customtags/ct_Image.cfm?Image_ID=911" },
+              { name: "<strong>Ecole Supérieure des Sciences Commerciales d'Angers (ESSCA) Campus Shanghai</strong><br>China, Shanghai", image: "https://www.challenges.fr/assets/img/2016/11/07/cover-r4x3w1200-5e4162732a27b-dsc07241.jpg" },
+              { name: "<strong>Edinburgh Napier University</strong><br>Scotland, Edinburgh", image: "https://www.esb-business-school.de/fileadmin/_processed_/e/6/csm_esb-business-school_Edinburgh_Napier_Craiglockhart_Interior_45f2f7e1b0.webp" },
+              { name: "<strong>ESCE International Business School</strong><br>France, Paris", image: "https://www.esb-business-school.de/fileadmin/_processed_/2/e/csm_esb-business-school_ESCE-Bild_1_5543e42ac0.webp" },
+              { name: "<strong>ESIC Business & Marketing School</strong><br>Spain, Madrid", image: "https://www.esb-business-school.de/fileadmin/_processed_/7/3/csm_esb-business-school_ESIC_Madrid_6G3A3871.JPG_5285ea628e.webp" },
+              { name: "<strong>FGV EAESP, Sao Paulo School of Business Administration</strong><br>Brazil, Sao Paulo", image: "https://www.esb-business-school.de/fileadmin/_processed_/b/e/csm_esb-business-school_FGV_1_96633ac670.webp" },
+              { name: "<strong>Haaga-Helia University of Applied Sciences</strong><br>Finland, Helsinki", image: "https://www.esb-business-school.de/fileadmin/_processed_/b/1/csm_esb-business-school_Haaga_Helia_Kampus_Pasila_L8A3844_7cba52fb3b.webp" },
+              { name: "<strong>HAN University of Applied Sciences, International School of Business</strong><br>Netherlands, Arnhem", image: "https://www.esb-business-school.de/fileadmin/_processed_/d/a/csm_esb-business-school_HAN_Int_School_of_Business_photo_Eva_Broekema_3ebafadaf8.webp" },
+              { name: "<strong>Hanyang University</strong><br>South Korea, Seoul", image: "https://www.esb-business-school.de/fileadmin/_processed_/a/3/csm_esb-business-school_Hanyang_University_Seoul_campus_e166e3d3df.webp" },
+              { name: "<strong>INHA University</strong><br>South Korea, Incheon", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzsVLEDfPfjciP4Ld7Lw67QZOmygtTCjBR6caLfq3lTQ&s" },
+              { name: "<strong>International University - Viet Nam National University Ho Chi Minh City (IU-VNU)</strong><br>Vietnam, Ho Chi Minh City", image: "https://www.esb-business-school.de/fileadmin/_processed_/c/c/csm_esb-business-school_Ho-Chi-Minh-International-University_2543404cba.webp" },
+              { name: "<strong>Jönköping International Business School</strong><br>Sweden, Jönköping", image: "https://ju.se/images/18.15ef28f7184cf9280582480/1669979443764/x1440p/JTH_210908-5854%20(1).jpg" },
+              { name: "<strong>Karlstad University</strong><br>Sweden, Karlstad", image: "https://www.esb-business-school.de/fileadmin/_processed_/c/9/csm_esb-business-school_Karlstad_University-foto_1_79ebdd3c60.webp" },
+              { name: "<strong>Kettering University</strong><br>USA, Flint", image: "https://www.esb-business-school.de/fileadmin/_processed_/e/e/csm_esb-business-school_Kettering_LearningCommons_ouside_cfaeab8470.webp" },
+              { name: "<strong>Kutztown University</strong><br>USA, Kutztown, Pennsylvania", image: "https://www.esb-business-school.de/fileadmin/_processed_/7/8/csm_esb-business-school_Kutztown_University-Foto_1_3ebda30ed4.webp" },
+              { name: "<strong>LAB University of Applied Sciences</strong><br>Finland, Lahti", image: "https://www.esb-business-school.de/fileadmin/_processed_/c/6/csm_esb-business-school_LAB_LUT_Photos__1__3b79df8226.webp" },
+              { name: "<strong>Mahidol University International College</strong><br>Thailand, Nakhonpathom", image: "https://www.esb-business-school.de/fileadmin/_processed_/f/5/csm_esb-business-school_Mahidol-foto_1_c779c29b04.webp" },
+              { name: "<strong>Marist College</strong><br>USA, Poughskeepsie", image: "https://www.esb-business-school.de/fileadmin/_processed_/9/0/csm_esb-business-school_Marist-Foto_1_26908a7cd7.webp" },
+              { name: "<strong>MCI | The Entrepreneurial School®</strong><br>Austria, Innsbruck", image: "https://www.esb-business-school.de/fileadmin/_processed_/0/4/csm_esb-business-school_MCI-Foto_1_0737a8dbba.webp" },
+              { name: "<strong>Montpellier Business School</strong><br>France, Montpellier", image: "https://www.esb-business-school.de/fileadmin/_processed_/e/e/csm_esb-business-school_Montpellier_Business_School-Foto_1_bb3cfa804f.webp" },
+              { name: "<strong>National Changhua University of Education</strong><br>Taiwan, Changhua City", image: "https://www.esb-business-school.de/fileadmin/_processed_/1/0/csm_esb-business-school_NCUE__Baisha_Lake_6cb6c66f79.webp" },
+              { name: "<strong>National Technical University of Ukraine 'Igor Sikorsky Kyiv Polytechnic Institute'</strong><br>Ukraine, Kyiv", image: "https://www.musa.in.ua/sites/default/files/styles/600x450/public/2020-03/kpi%20photo%20%288%29.jpg?itok=iq41n5Ki" },
+              { name: "<strong>National Yang Ming Chiao Tung University</strong><br>Taiwan, Hsinchu", image: "https://intlaffairs.hku.hk/backend/wp-content/uploads/2023/11/national-yang-ming-chiao-tung-university_page_1.jpg" },
+              { name: "<strong>Nelson Mandela University</strong><br>South Africa, Port Elizabeth", image: "https://www.esb-business-school.de/fileadmin/_processed_/f/9/csm_esb-business-school-NMU_011Zebras-on-South-Campus_7ba4389600.webp" },
+              { name: "<strong>Neoma Business School, Campus Rouen</strong><br>France, Rouen", image: "https://www.esb-business-school.de/fileadmin/_processed_/7/0/csm_esb-business-school_Neoma_Rouen-14_d954245ac1.webp" },
+              { name: "<strong>Polytechnic University of Valencia</strong><br>Spain, Valencia", image: "https://www.esb-business-school.de/fileadmin/_processed_/8/b/csm_esb-business-school_Universitat_Politecnica_de_Valenica-Foto_1_eb59d24b9f.webp" },
+              { name: "<strong>Pompeu Fabra University, ESCI-UPF</strong><br>Spain, Barcelona", image: "https://www.esb-business-school.de/fileadmin/_processed_/3/e/csm_esb-business-school_ESCI_Barcelona-Foto_1_8f420f9083.webp" },
+              { name: "<strong>Pontificia Universidad Católica de Valparaíso</strong><br>Chile, Valparaiso", image: "https://www.observador.cl/wp-content/uploads/2023/03/PUCV-cumple-95-anos-fue-la-primera-universidad-de-la-region-de-Valparaiso-y-la-cuarta-en-el-pais.jpeg" },
+              { name: "<strong>Purdue University</strong><br>USA, West Lafayette", image: "https://www.esb-business-school.de/fileadmin/_processed_/1/6/csm_esb-business-school_Purdue_Campusbild_85dbb87296.webp" },
+              { name: "<strong>Rabat Business School</strong><br>Morocco, Rabat", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfLRDgG5oPFxbf3UbuO6301x_tPOtCy7nyDo3_DhIqjQ&s" },
+              { name: "<strong>Reichman University</strong><br>Israel, Herzliya", image: "https://www.esb-business-school.de/fileadmin/_processed_/d/f/csm_esb-business-school_Reichman_DORMITORIES_001_03812c7335.webp" },
+              { name: "<strong>San Diego State University</strong><br>USA, San Diego", image: "https://www.esb-business-school.de/fileadmin/_processed_/3/3/csm_esb-business-school_SDSU_1_4a7f283c9e.webp" },
+              { name: "<strong>Sheffield Hallam University, Sheffield Business School</strong><br>England, Sheffield", image: "https://www.esb-business-school.de/fileadmin/_processed_/c/1/csm_esb-business-school_SHU_High_Resolution-SHU_Building_1_dacd31b2ae.webp" },
+              { name: "<strong>South East Technological University</strong><br>Ireland, Waterford", image: "https://www.esb-business-school.de/fileadmin/_processed_/6/b/csm_esb-business-school_SETU_Waterford_f032120e8c.webp" },
+              { name: "<strong>St. Francis Xavier University</strong><br>Canada, Antigonish", image: "https://www.esb-business-school.de/fileadmin/_processed_/8/b/csm_esb-business-school_St._Francis_Xavier-Foto_1_f630f27d28.webp" },
+              { name: "<strong>Swansea University</strong><br>Wales, Swansea", image: "https://www.esb-business-school.de/fileadmin/_processed_/f/b/csm_esb-business-school_University_of_Swansea-Foto_1_45beb73a85.webp" },
+              { name: "<strong>Swinburne University of Technology</strong><br>Australia, Melbourne", image: "https://www.esb-business-school.de/fileadmin/_processed_/d/0/csm_esb-business-school_Swinburne_ATC-steps_a92f0b2bad.webp" },
+              { name: "<strong>Tecnológico de Monterrey</strong><br>Mexico, Monterrey", image: "https://www.esb-business-school.de/fileadmin/_processed_/e/f/csm_esb-business-school_Tec_de_Monterrey_20a4d4969f.webp" },
+              { name: "<strong>Tohoku University, Graduate School of Economics and Management</strong><br>Japan, Sendai City", image: "https://www.timeshighereducation.com/student/sites/default/files/styles/default/public/tohoku_university.jpg?itok=7mFMqeHG" },
+              { name: "<strong>Toulouse Business School</strong><br>France, Toulouse", image: "https://www.esb-business-school.de/fileadmin/_processed_/c/4/csm_esb-business-school_TBS_Lascrosses_entree_etudiants_1_c_TBS_Education_187eb32177.webp" },
+              { name: "<strong>Trinity Western University</strong><br>Canada, Langley", image: "https://www.bpmcdn.com/f/files/aldergrove/import/2020-02/20531912_web1_200212-LAT-TWU-New-Building-TWU_1.jpg" },
+              { name: "<strong>Tsinghua University, School of Economics and Management</strong><br>China, Beijing", image: "https://www.esb-business-school.de/fileadmin/_processed_/9/1/csm_esb-business-school_Tsinghua-Foto_1_eeee677253.webp" },
+              { name: "<strong>Universidad de Las Palmas de Gran Canaria (ULPGC)</strong><br>Spain, Las Palmas de Gran Canaria", image: "https://sie.ulpgc.es/sites/default/files/media/images/2020-09/contacto-admin.jpg" },
+              { name: "<strong>Universidad de Monterrey</strong><br>Mexico, Monterrey", image: "https://upload.wikimedia.org/wikipedia/commons/0/0b/UDEM_Universidad_de_Monterrey.jpg" },
+              { name: "<strong>Universidad San Francisco de Quito</strong><br>Ecudor, Quito", image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi_DxmmiCnWZE3scq9MBdOLJrnpe6cT1IrABL1eV2ymbIXNTBMna-NC0vDVvYdSu2jUeyz1HKicWNp_wrdKreJmKUqx4ngP8MpTCRJe1tRbi_NhyphenhyphenYrlPCD0dhzd1vXxBLzDubkdlo6HN5E1/s1600/USFQ_campus8.jpg"},
+              { name: "<strong>University of Agder</strong><br>Norway, Kristiansand", image: "https://keystoneacademic-res.cloudinary.com/image/upload/f_auto/q_auto/g_auto/c_fill/w_1280/element/19/198675_uiacover199.jpg"},
+              { name: "<strong>University of Applied Sciences Northwestern Switzerland, School of Business</strong><br>Switzerland, Olten", image: "https://www.esb-business-school.de/fileadmin/_processed_/0/3/csm_esb-business-school_FHNW-Foto_1_e1f2bc63c8.webp" },
+              { name: "<strong>University of Applied Sciences Wiener Neustadt</strong><br>Austria, Wiener Neustadt", image: "https://www.esb-business-school.de/fileadmin/_processed_/3/8/csm_esb-business-school_FHWN_Austria-Foto_1_26a5e61447.webp" },
+              { name: "<strong>University of Barcelona, Faculty of Economics and Business</strong><br>Spain, Barcelona", image: "https://www.esb-business-school.de/fileadmin/_processed_/e/7/csm_esb-business-school_University_of_Barcelona-Foto_1.JPG_8a0d11c5a6.webp" },
+              { name: "<strong>University of Exeter</strong><br>England, Exeter and Penryn", image: "https://www.esb-business-school.de/fileadmin/_processed_/f/7/csm_esb-business-school_University_of_Exeter-Foto_1_97a4bd7c2a.webp" },
+              { name: "<strong>University of Lethbridge</strong><br>Canada, Lethbrigde", image: "https://www.esb-business-school.de/fileadmin/_processed_/7/2/csm_esb-business-school_Lethbridge-Foto_1_9f018911e4.webp" },
+              { name: "<strong>University of New England (UNE)</strong><br>Australia, Armidale", image: "https://www.esb-business-school.de/fileadmin/_processed_/4/c/csm_esb-business-school_UNE-Foto_1_256c352c76.webp" },
+              { name: "<strong>University of New South Wales (UNSW)</strong><br>Australia, Sydney", image: "https://rutegaeducation.com/wp-content/uploads/2020/02/unsw00.jpg" },
+              { name: "<strong>University of Sherbrooke</strong><br>Canada, Sherbrooke", image: "https://images.shiksha.com/mediadata/images/1541654396phpQsQqjc.jpeg" },
+              { name: "<strong>University of Turin</strong><br>Italy, Turin", image: "https://www.esb-business-school.de/fileadmin/_processed_/2/2/csm_esb-business-school_Unito_89160a2ad4.webp" },
+              { name: "<strong>Valparaiso University</strong><br>USA, Valparaiso", image: "https://www.esb-business-school.de/fileadmin/_processed_/9/d/csm_esb-business-school_Valparaiso_Campus_Sunrise_eb4d42c727.webp" },
+              { name: "<strong>Western Kentucky University, Gordon Ford College of Business</strong><br>USA, Bowling Green", image: "https://www.esb-business-school.de/fileadmin/_processed_/0/b/csm_Western_Kentucky_University__Centennial_Mall__cherry_blossoms_b505e11604.webp" },
+              { name: "<strong>Western Sydney University</strong><br>Australia, Sydney", image: "https://images.shiksha.com/mediadata/images/1533896110phpf1Qvb0.jpeg" },
+              { name: "<strong>Yeditepe University</strong><br>Turkey, Istambul", image: "https://www.esb-business-school.de/fileadmin/_processed_/2/d/csm_esb-business-school_Yeditepe_1__1__885b2b86e9.webp" },
+              { name: "<strong>Zagreb School of Economics and Management (ZSEM)</strong><br>Croatia, Zagreb", image: "https://www.esb-business-school.de/fileadmin/_processed_/1/a/csm_esb-business-school_ZSEM_Facade___1__c43ff21c83.webp" },
+              { name: "<strong>ZHAW School of Management and Law</strong><br>Switzerland, Winterthur", image: "https://www.esb-business-school.de/fileadmin/_processed_/b/b/csm_esb-business-school_ZHAW-Foto_1_4586dcaf98.webp" }
+            ];
+            for (let i = 0; i < universities.length; i++) {
+                var universityHTML = `<div class="university" onclick="showInfo(${i})">
+                                          <img src="${universities[i].image}" alt="${universities[i].name}">
+                                          <span class="university-name">${universities[i].name}</span>
+                                      </div>`;
+                document.getElementById('university-container').innerHTML += universityHTML;
+            }
+            function showInfo(index) {
+                document.getElementById('university-container').style.display = 'none';
+                var infoContainer = document.getElementById('info-container');
+                infoContainer.style.display = 'flex';
+                var infos = document.getElementsByClassName('info-content');
+                for (var i = 0; i < infos.length; i++) {
+                    infos[i].style.display = 'none';
+                }
+                var selectedInfo = document.getElementsByClassName('info-content')[index];
+                selectedInfo.style.display = 'block';
+            }
+            function closeInfo() {
+                document.getElementById('university-container').style.display = 'grid';
+                var infoContainer = document.getElementById('info-container');
+                infoContainer.style.display = 'none';
+            }
+        </script>
+    </div>
+    
+    <div id="info-container" class="info-container">
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>Atlantic Technological University (ATU)</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453765/mod_folder/content/0/Ireland/ATU_Galway.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>Austral University</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453771/mod_folder/content/0/Argentina/Universidad%20Austral%2C%20Argentina.pdf?forcedownload=1">Click here to see more information</a> </p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>Beijing Normal University</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453768/mod_folder/content/0/China/Beijing%20Normal%20University.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>Bucharest University of Economic Studies</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453768/mod_folder/content/0/Romania/Bucharest%20University%20of%20Economic%20Studies%2C%20Romania.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>California State University, Long Beach</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453765/mod_folder/content/0/USA/California%20State%20University%2C%20USA.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>Chapman University</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453765/mod_folder/content/0/USA/Chapman%20University%2C%20USA.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>Chulalongkorn University</h2>
+            <p><a href="">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>Donghua University</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453768/mod_folder/content/0/China/DONGHUA%20-%20CHINA.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>Ecole Supérieure des Sciences Commerciales d'Angers (ESSCA)</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453769/mod_folder/content/0/France/ESSCA%2C%20France.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>Ecole Supérieure des Sciences Commerciales d'Angers (ESSCA) Campus Budapest</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453768/mod_folder/content/0/Hungary/ESSCA%20BUDAPEST%202.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>Ecole Supérieure des Sciences Commerciales d'Angers (ESSCA) Campus Shanghai</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453768/mod_folder/content/0/China/ESSCA%20Angers%2C%20China.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>Edinburgh Napier University</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453765/mod_folder/content/0/UK/Edinburgh%20Napier%20University%2C%20Scotland.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>ESCE International Business School</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453769/mod_folder/content/0/France/ESCE%2C%20France.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>ESIC Business & Marketing School</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453771/mod_folder/content/0/Spain/ESIC%20Business%20%20Marketing%20School%2C%20Spain.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>FGV EAESP, Sao Paulo School of Business Administration</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453768/mod_folder/content/0/Brazil/FGV_POSTER%20-%20BRAZIL.png?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>Haaga-Helia University of Applied Sciences</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453768/mod_folder/content/0/Finland/Haaga-Helia%20University%20of%20Applied%20Sciences%2C%20Finland.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>HAN University of Applied Sciences, International School of Business</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453768/mod_folder/content/0/Netherlands/Han%20Hogeschool%2C%20Netherlands.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>Hanyang University</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453768/mod_folder/content/0/South%20%20Korea/Hanyang%20University%2C%20South%20Korea.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>INHA University</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453768/mod_folder/content/0/South%20%20Korea/INHA%20KOREA.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>International University - Viet Nam National University Ho Chi Minh City (IU-VNU)</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453768/mod_folder/content/0/Vietnam/International%20University%20Ho%20Chi%20Minh%2C%20Vietnam.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>Jönköping International Business School</h2>
+            <p><a href="">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>Karlstad University</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453768/mod_folder/content/0/Sweden/Karlstad%20University%2C%20Sweden.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>Kettering University</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453765/mod_folder/content/0/USA/Kettering%20University%2C%20USA.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>Kutztown University</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453765/mod_folder/content/0/USA/Kutztown%20University%20of%20Pennsylvania%2C%20USA.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>LAB University of Applied Sciences</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453768/mod_folder/content/0/Finland/LAB%20University%20of%20Applied%20Sciences%2C%20Finland.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>Mahidol University International College</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453768/mod_folder/content/0/Thailand/Mahidol%20University%2C%20Thailand.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>Marist College</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453765/mod_folder/content/0/USA/Marist%20College%2C%20USA.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>MCI | The Entrepreneurial School</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453770/mod_folder/content/0/Austria/MANAGEMENT%20CENTER%20INNSBRUCK.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>Montpellier Business School</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453769/mod_folder/content/0/France/Montpellier%20Business%20School.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>National Changhua University of Education</h2>
+            <p><a href="">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>National Technical University of Ukraine 'Igor Sikorsky Kyiv Polytechnic Institute'</h2>
+            <p><a href="">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>National Yang Ming Chiao Tung University</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453768/mod_folder/content/0/Taiwan/NYCU_Taiwan.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>Nelson Mandela University</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453768/mod_folder/content/0/South%20Africa/Nelson%20Mandela%20Metropolitan%20University%2C%20South%20Africa.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>Neoma Business School, Campus Rouen</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453769/mod_folder/content/0/France/Neoma%20Business%20School%2C%20France.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>Polytechnic University of Valencia</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453771/mod_folder/content/0/Spain/Universidad%20Politecnica%20de%20Valencia%2C%20Spain.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>Pompeu Fabra University, ESCI-UPF</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453771/mod_folder/content/0/Spain/Escola%20Superior%20de%20Comercio%20Internacional%20Universitat%20Pompeu%20Fabra%20%28ESCI-UPF%29%2C%20Spain.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>Pontificia Universidad Católica de Valparaíso</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453771/mod_folder/content/0/Chile/Pontificia%20Universidad%20Catolica%20de%20Valparaiso.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>Purdue University</h2>
+            <p><a href="">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>Rabat Business School</h2>
+            <p><a href="">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>Reichman University</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453768/mod_folder/content/0/Israel/Reichman%20University_Israel.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>San Diego State University</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453765/mod_folder/content/0/USA/San%20Diego%20State%20University%2C%20USA.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>Sheffield Hallam University, Sheffield Business School</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453765/mod_folder/content/0/UK/Sheffield%20Hallam%20UNI%20POSTER%20-%20UK.png?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>South East Technological University</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453765/mod_folder/content/0/Ireland/SETU_Waterford.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>St. Francis Xavier University</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453765/mod_folder/content/0/Canada/St.%20Francis%20Xavier%20University%2C%20Canada.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>Swansea University</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453765/mod_folder/content/0/UK/Swansea%20University%2C%20Wales.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>Swinburne University of Technology</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453765/mod_folder/content/0/Australia/SWINBURNE%20-%20AUS.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>Tecnológico de Monterrey</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453771/mod_folder/content/0/M%C3%A9xico/Tecnologico%20de%20Monterrey.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>Tohoku University, Graduate School of Economics and Management</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453768/mod_folder/content/0/Japan/Tohoku%20University%2C%20Japan.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>Toulouse Business School</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453769/mod_folder/content/0/France/Toulouse%20Business%20School%2C%20France.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>Trinity Western University</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453765/mod_folder/content/0/Canada/Trinity%20Western%20University%2C%20Canada.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>Tsinghua University, School of Economics and Management</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453768/mod_folder/content/0/China/Tsinghua%20University%2C%20China.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>Universidad de Las Palmas de Gran Canaria (ULPGC)</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453771/mod_folder/content/0/Spain/Universidad%20de%20Las%20Palmas%20de%20Gran%20Canaria%2C%20Spain.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>Universidad de Monterrey</h2>
+            <p><a href="">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>Universidad San Francisco de Quito</h2>
+            <p><a href="">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>University of Agder</h2>
+            <p><a href="">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>University of Applied Sciences Northwestern Switzerland, School of Business</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453770/mod_folder/content/0/Switzerland/University%20of%20Applied%20Sciences%20Northwestern%20Switzerland.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>University of Applied Sciences Wiener Neustadt</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453770/mod_folder/content/0/Austria/WIENER%20NEUSTADT.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>University of Barcelona, Faculty of Economics and Business</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453771/mod_folder/content/0/Spain/Universidad%20de%20Barcelona%2C%20Spain.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>University of Exeter</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453765/mod_folder/content/0/UK/University%20of%20Exeter%2C%20England.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>University of Lethbridge</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453765/mod_folder/content/0/Canada/University%20of%20Lethbridge%2C%20Canada.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>University of New England (UNE)</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453765/mod_folder/content/0/Australia/UNI%20POSTER%20-%20UNE%20-%20AUS.png?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>University of New South Wales (UNSW)</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453765/mod_folder/content/0/Australia/University%20of%20New%20South%20Wales%2C%20Australia.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>University of Sherbrooke</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453769/mod_folder/content/0/Qu%C3%A9bec/Universite%20de%20Sherbrooke%2C%20Canada.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>University of Turin</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453768/mod_folder/content/0/Italy/University%20of%20Torino_POSTER.png?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>Valparaiso University</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453765/mod_folder/content/0/USA/Valparaiso%20University%2C%20USA.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>Western Kentucky University, Gordon Ford College of Business</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453765/mod_folder/content/0/USA/Western%20Kentucky%20University%2C%20USA.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>Western Sydney University</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453765/mod_folder/content/0/Australia/Western%20Sydney%20University%2C%20Australia.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>Yeditepe University</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453768/mod_folder/content/0/Turkey/Yeditepe%20University%2C%20Turkey.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>Zagreb School of Economics and Management (ZSEM)</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453768/mod_folder/content/0/Croatia/Zagreb%20School%20of%20Economics%20and%20Management%2C%20Croatia.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+        <div class="info-content">
+            <span onclick="closeInfo()" class="close-btn">&times;</span>
+            <h2>ZHAW School of Management and Law</h2>
+            <p><a href="https://relax.reutlingen-university.de/pluginfile.php/453770/mod_folder/content/0/Switzerland/_ZHAW%20SCHOOL%20OF%20MANAGEMENT%20%20LAW%20%20%20.pdf?forcedownload=1">Click here to see more information</a></p>
+        </div>
+    </div>
+
+     <!-- Sidebar -->
+<div id="sidebar" class="sidebar">
+    <!-- Botón de cerrar en la esquina superior derecha del sidebar -->
+    <button id="close-sidebar-btn" class="close-menu-btn">&times;</button>
+    <!-- Contenido del sidebar -->
+    <a href="#">Homepage</a>
+    <a href="#">About us</a>
+    <a href="#">Service</a>
+    <a href="#">Contact</a>
+</div>
+
+<!-- Botón de menú para abrir el sidebar -->
+<button id="open-sidebar-btn" class="open-menu-btn">&#9776;</button>
+
+    <script>
+        function searchFunction() {
+            var input, filter, container, universities, university, i, txtValue;
+            input = document.getElementById('searchInput');
+            filter = input.value.toUpperCase();
+            container = document.getElementById('university-container');
+            universities = container.getElementsByClassName('university');
+            
+            for (i = 0; i < universities.length; i++) {
+                university = universities[i].getElementsByClassName('university-name')[0];
+                txtValue = university.textContent || university.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    universities[i].style.display = "";
+                } else {
+                    universities[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+<div id="login-container">
+    <span class="close-login-btn" id="close-login-btn">X</span>
+    <h2>Login</h2>
+    <form id="login-form">
+        <label for="email-login">Email:</label>
+        <input type="email" id="email-login" name="email" required><br><br>
+        
+        <label for="password-login">Password:</label>
+        <input type="password" id="password-login" name="password" required><br><br>
+        
+        <button id="loginButton">Login</button><br><br> <!-- Cambiado a button -->
+    </form>
+
+    <button id="create-account-btn">Create New Profile</button> <br><br>
+
+    <div id="infoBox" style="display: none;">
+        <label for="Full Name">Full Name:</label>
+        <input type="full name" id="full-name" name="full-name" required><br><br>
+        
+        <label for="Email">Email:</label>
+        <input type="email" id="email-register" name="email-register" required><br><br>
+
+        <label for="Password">Password</label>
+        <input type="password" id="password-register" name="password-register" required><br><br>
+        
+        <button id="registerButton">Register</button>
+        <button id="closeButton">Close</button>
+    </div>
+    <div id="user-details" style="display: none;">
+        <!-- Aquí se mostrará el nombre y el email del usuario -->
+        <p id="user-info"></p>
+        <!-- Agrega un botón para cerrar sesión -->
+        <button id="logoutButton">Cerrar Sesión</button>
+    </div>
+</div>
+
+<button id="login-link">Login</button>
+
+<div id="user-details" style="display: none;">
+    <!-- Aquí se mostrará el nombre y el email del usuario -->
+    <p id="user-info"></p>
+    <!-- Agrega un botón para cerrar sesión -->
+    <button id="logoutButton">Cerrar Sesión</button>
+</div>
+
+
+
+<div class="central-comment-section">
+    <h3>Comments</h3>
+    <div>
+        <label for="comment-search">Search Comments:</label>
+        <input type="text" id="comment-search" oninput="searchComments()">
+    </div>
+    <div id="central-comments-list"></div>
+    <form id="central-comment-form">
+        <label for="central-comment">Add Comment:</label><br>
+        <textarea id="central-comment" name="comment" rows="4" cols="50"></textarea><br>
+        <label for="comment-topic">Topic:</label>
+        <select id="comment-topic" name="topic">
+            <option value="Atlantic Technological University (ATU)">Atlantic Technological University (ATU)</option>
+            <option value="Austral University">Austral University</option>
+            <option value="Beijing Normal University">Beijing Normal University</option>
+            <option value="Bucharest University of Economic Studies">Bucharest University of Economic Studies</option>
+            <option value="California State University, Long Beach">California State University, Long Beach</option>
+            <option value="Chapman University">Chapman University</option>
+            <option value="Chulalongkorn">Chulalongkorn</option>
+            <option value="Donghua University">Donghua University</option>
+            <option value="Ecole Supérieure des Sciences Commerciales d'Angers (ESSCA)">Ecole Supérieure des Sciences Commerciales d'Angers (ESSCA)</option>
+            <option value="Ecole Supérieure des Sciences Commerciales d'Angers (ESSCA) Campus Budapest">Ecole Supérieure des Sciences Commerciales d'Angers (ESSCA) Campus Budapest</option>
+            <option value="Ecole Supérieure des Sciences Commerciales d'Angers (ESSCA) Campus Shanghai">Ecole Supérieure des Sciences Commerciales d'Angers (ESSCA) Campus Shanghai</option>
+            <option value="Edinburgh Napier University">Edinburgh Napier University</option>
+            <option value="ESCE International Business School">ESCE International Business School</option>
+            <option value="ESIC Business & Marketing School">ESIC Business & Marketing School</option>
+            <option value="FGV EAESP, Sao Paulo School of Business Administration">FGV EAESP, Sao Paulo School of Business Administration</option>
+            <option value="Haaga-Helia University of Applied Sciences">Haaga-Helia University of Applied Sciences</option>
+            <option value="HAN University of Applied Sciences, International School of Business">HAN University of Applied Sciences, International School of Business</option>
+            <option value="Hanyang University">Hanyang University</option>
+            <option value="INHA University">INHA University</option>
+            <option value="International University - Viet Nam National University Ho Chi Minh City (IU-VNU)">International University - Viet Nam National University Ho Chi Minh City (IU-VNU)</option>
+            <option value="Jönköping International Business School">Jönköping International Business School</option>
+            <option value="Karlstad University">Karlstad University</option>
+            <option value="Kettering University">Kettering University</option>
+            <option value="Kutztown University">Kutztown University</option>
+            <option value="LAB University of Applied Sciences">LAB University of Applied Sciences</option>
+            <option value="Mahidol University International College">Mahidol University International College</option>
+            <option value="Marist College">Marist College</option>
+            <option value="MCI | The Entrepreneurial School®">MCI | The Entrepreneurial School®</option>
+            <option value="Montpellier Business School">Montpellier Business School</option>
+            <option value="National Changhua University of Education">National Changhua University of Education</option>
+            <option value="National Technical University of Ukraine 'Igor Sikorsky Kyiv Polytechnic Institute'">National Technical University of Ukraine 'Igor Sikorsky Kyiv Polytechnic Institute'</option>
+            <option value="National Yang Ming Chiao Tung University">National Yang Ming Chiao Tung University</option>
+            <option value="Nelson Mandela University">Nelson Mandela University</option>
+            <option value="Neoma Business School, Campus Rouen">Neoma Business School, Campus Rouen</option>
+            <option value="Polytechnic University of Valencia">Polytechnic University of Valencia</option>
+            <option value="Pompeu Fabra University, ESCI-UPF">Pompeu Fabra University, ESCI-UPF</option>
+            <option value="Pontificia Universidad Católica de Valparaíso">Pontificia Universidad Católica de Valparaíso</option>
+            <option value="Purdue University">Purdue University</option>
+            <option value="Rabat Business School">Rabat Business School</option>
+            <option value="Reichman University">Reichman University</option>
+            <option value="San Diego State University">San Diego State University</option>
+            <option value="Sheffield Hallam University, Sheffield Business School">Sheffield Hallam University, Sheffield Business School</option>
+            <option value="South East Technological University">South East Technological University</option>
+            <option value="St. Francis Xavier University">St. Francis Xavier University</option>
+            <option value="Swansea University">Swansea University</option>
+            <option value="Swinburne University of Technology">Swinburne University of Technology</option>
+            <option value="Tecnológico de Monterrey">Tecnológico de Monterrey</option>
+            <option value="Tohoku University, Graduate School of Economics and Management">Tohoku University, Graduate School of Economics and Management</option>
+            <option value="Toulouse Business School">Toulouse Business School</option>
+            <option value="Trinity Western University">Trinity Western University</option>
+            <option value="Tsinghua University, School of Economics and Management">Tsinghua University, School of Economics and Management</option>
+            <option value="Universidad de Las Palmas de Gran Canaria (ULPGC)">Universidad de Las Palmas de Gran Canaria (ULPGC)</option>
+            <option value="Universidad de Monterrey">Universidad de Monterrey</option>
+            <option value="Universidad San Francisco de Quito">Universidad San Francisco de Quito</option>
+            <option value="University of Agder">University of Agder</option>
+            <option value="University of Applied Sciences Northwestern Switzerland, School of Business">University of Applied Sciences Northwestern Switzerland, School of Business</option>
+            <option value="University of Applied Sciences Wiener Neustadt">University of Applied Sciences Wiener Neustadt</option>
+            <option value="University of Barcelona, Faculty of Economics and Business">University of Barcelona, Faculty of Economics and Business</option>
+            <option value="University of Exeter">University of Exeter</option>
+            <option value="University of Lethbridge">University of Lethbridge</option>
+            <option value="University of New England (UNE)">University of New England (UNE)</option>
+            <option value="University of New South Wales (UNSW)">University of New South Wales (UNSW)</option>
+            <option value="University of Sherbrooke">University of Sherbrooke</option>
+            <option value="University of Turin">University of Turin</option>
+            <option value="Valparaiso University">Valparaiso University</option>
+            <option value="Western Kentucky University, Gordon Ford College of Business">Western Kentucky University, Gordon Ford College of Business</option>
+            <option value="Western Sydney University">Western Sydney University</option>
+            <option value="Yeditepe University">Yeditepe University</option>
+            <option value="Zagreb School of Economics and Management (ZSEM)">Zagreb School of Economics and Management (ZSEM)</option>
+            <option value="ZHAW School of Management and Law">ZHAW School of Management and Law</option>
+
+        </select><br>
+        <button type="submit">Submit</button>
+    </form>
+    
+</div>
+
+<script src="index.js"></script>
+
+</body>
+</html>
